@@ -130,13 +130,88 @@ git clone https://github.com/twobiers/talks.git
 ## Commits
 
  - Verwaltungseinheit vom Code
+ - Atomare Änderung
  - Bestandteile:
-   - Author des Commits
-   - Datum des Commits
-   - Commit-Nachricht ("Was wurde warum geändert?")
+   - Autor
+   - Datum
+   - Nachricht ("Was wurde warum geändert?")
    - Zeiger auf vorhergehenden Commit-Hash (SHA1)
    - Code-Änderungen ("Diffs")
 
 ---
 
-### Ansicht im `git log`
+## Aufbau eines Commits
+
+```
+$ git log
+commit 598b8c01a39d0c0ef3e965a3622c1e439be4ced6 (HEAD -> main)
+Author: twobiers <22715034+twobiers@users.noreply.github.com>
+Date:   Wed Nov 9 20:07:38 2022 +0100
+
+    initialize git speaker deck
+```
+
+--- 
+
+* Commits basieren auf commits
+* Intern verkettete Liste
+
+
+![invert:100%](./assets/commit-graph-simple.png)
+
+---
+
+* Spezieller HEAD Zeiger, zeigt aktuellen "Ort"
+
+![invert:100%](./assets/commit-graph-head-1.png)
+
+---
+
+* Kann verschoben werden
+
+![invert:100%](./assets/commit-graph-head-2.png)
+
+---
+
+TODO:
+- Staging Area
+- How to commit
+- branches
+- revert/reset
+- merge
+- diff
+
+---
+# Best Practices
+## `push --force` vermeiden.
+
+* Überschreibt Änderungshistorie
+* Destruktive Aktion
+* Bearbeiter können mit ihrer Arbeit auf existierenden Commits basieren, die gelöscht werden
+
+## Keine temporären Dateien einchecken
+- z.B. Editor-Dateien, `Thumbs.db`, `.DS_STORE`
+- Oder `node_modules`
+- `.gitignore` zum Ignorieren (<https://gitignore.io>)
+
+---
+# Best Practices
+## Kleine, spezifische Commits
+- Kleinschrittiges Commiten
+- Aussagekräftige Commit-Nachricht
+
+## Keine Geheimnisse einchecken
+- Schwer, aus alten Commits zu entfernen
+- Ggf. trotzdem rekonstruierbar (`git reflog`)
+
+---
+# Best Practices
+## Conventional Commits
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+<https://www.conventionalcommits.org/>
