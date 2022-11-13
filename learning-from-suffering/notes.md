@@ -2,8 +2,10 @@
 - https://www.quora.com/What-is-the-worst-mistake-ever-made-in-computer-science-and-programming-that-proved-to-be-painful-for-programmers-for-years
 - https://en.wikipedia.org/wiki/Pentium_FDIV_bug
 - https://en.wikipedia.org/wiki/Year_2000_problem
+  - https://en.wikipedia.org/wiki/Year_2038_problem
 - https://gist.github.com/timvisee/fcda9bbdff88d45cc9061606b4b923ca
 - https://github.com/kdeldycke/awesome-falsehood
 - https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/
   - https://hinchman-amanda.medium.com/null-pointer-references-the-billion-dollar-mistake-1e616534d485
 - https://www.makeuseof.com/tag/worst-programming-mistakes-in-history/
+- Christopher Null
