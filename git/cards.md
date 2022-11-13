@@ -173,13 +173,133 @@ Date:   Wed Nov 9 20:07:38 2022 +0100
 
 ---
 
-TODO:
-- Staging Area
-- How to commit
-- branches
-- revert/reset
-- merge
-- diff
+## Staging Area
+
+* Für einen Commit werden Änderungen in Staging Area verschoben
+* Nur das was in der Staging Area ist, landet im Commit
+
+![invert:100%](https://git-scm.com/images/about/index1@2x.png)
+
+---
+
+## How To Commit
+
+### 1. Änderungen prüfen
+
+```
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cards.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	assets/commit-graph-branch.png
+	assets/commit-graph-merge.png
+```
+
+---
+
+### 2. Änderungen in Staging Area schieben
+
+Gesamtes Verzeichnis: `git add .`
+Bestimmte Datei: `git add cards.md`
+Datei aus Staging Area nehmen: `git reset --staged cards.md`
+
+---
+
+### 3. Staging Area prüfen
+
+```
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   assets/commit-graph-branch.png
+	new file:   assets/commit-graph-merge.png
+	modified:   cards.md
+```
+---
+
+### 4. Commit verfassen
+
+```
+$ git commit -m "Add git branching to cards"
+```
+
+---
+
+### 5. Änderungen pushen
+
+* Commits sollten zeitnah gepusht werden
+
+In den meisten Fällen geht das durch ein einfaches
+```
+$ git push
+```
+oder für einen nicht existierenden Branch
+```
+$ git push -u [target] [branch]
+$ git push -u origin feature-branch
+```
+
+---
+
+## Branching
+
+* "Abspalten" von einem Entwicklungsstand
+* Bspw. für Feature-Entwicklung losgekoppelt von dem Hauptstrang
+
+![invert:100%](./assets/commit-graph-branch.png)
+
+---
+
+## Merge
+
+* Zusammenführen von Branches
+
+![invert:100%](./assets/commit-graph-merge.png)
+
+---
+
+## Revert
+
+* Fehlerhafte Commits passieren
+* Git unterstützt es die Änderungen rückgängig zu machen
+* Dabei werden Änderungen über einen neuen Commit rückgängig gemacht
+  * Historie bleibt stabil
+
+```
+$ git revert 78cdcd
+```
+
+--- 
+# Praktischer Durchlauf
+
+<!--
+git checkout git@github.com:twobiers/talks.git
+git branch typo-fix
+git checkout typo-fix
+ÄNDERUNG MACHEN
+git add .
+git commit -m "fix a typo"
+git push -u origin typo-fix
+git checkout main
+
+git pull
+
+git merge typo-fix
+git push
+git log
+git revert COMMIT-HASH
+git push
+-->
 
 ---
 # Best Practices
