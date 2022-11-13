@@ -9,3 +9,4 @@
   - https://hinchman-amanda.medium.com/null-pointer-references-the-billion-dollar-mistake-1e616534d485
 - https://www.makeuseof.com/tag/worst-programming-mistakes-in-history/
 - Christopher Null
+- https://www.bbc.com/future/article/20160325-the-names-that-break-computer-systems
