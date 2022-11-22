@@ -20,38 +20,56 @@ https://github.com/yhatt/marp-cli-example
 
 ## Motivation
 
-- bachelorarbeit.pdf
-- bacheloarbeitV2.pdf
-- bachelorarbeitV2-final.pdf
+-   bachelorarbeit.pdf
+-   bacheloarbeitV2.pdf
+-   bachelorarbeitV2-final.pdf
+-   seminararbeit-finalv3.pdf
 
-    </div>
-    <div>
+      </div>
+      <div>
 
 ## Versionskontrolle
 
-- Organisations von Änderungen
-- Ziele:
-  - Nachvollziehbare Änderungen
-  - Zugriff auf alte Versionen
-  - Austauschen von Änderungen
+-   Organisations von Änderungen
+-   Ziele:
 
-    </div>
-</div>
+    -   Nachvollziehbare Änderungen
+    -   Zugriff auf alte Versionen
+    -   Austauschen von Änderungen
+
+            </div>
+
+        </div>
 
 ---
 
+
+## Pull Request
+
+-   TODO
+
+---
+
+## Merge Conflict
+
+agjag
+
+
 # Steckbrief
 
-- 2005 von Linus Torvalds initiiert
-- Hat nahezu alle alternativen verdrängt [1]
-- Entwicklung des Linux-Kernels
-- Dezentralität
-  - Jeder Nutzer besitzt vollständige Kopie
-
+-   2005 von Linus Torvalds (der von Linux) initiiert
+-   Hat nahezu alle alternativen verdrängt [1]
+-   Entwicklung des Linux-Kernels
+-   Dezentralität
+    -   Jeder Nutzer besitzt vollständige Kopie
 
 <sub>[1] [StackOverflow Developer Survey 2022](https://survey.stackoverflow.co/2022/#section-version-control-version-control-systems)</sub>
 
 ![bg right 60%](https://cdn.britannica.com/99/124299-050-4B4D509F/Linus-Torvalds-2012.jpg)
+
+---
+
+## TODO
 
 ---
 
@@ -67,9 +85,11 @@ https://github.com/yhatt/marp-cli-example
 
 **OSX**
 homebrew: <https://brew.sh/>
+
 ```sh
 brew install git git-gui
 ```
+
 **Linux**
 Spezifischen Paketmanager nutzen, um `git` zu installieren
 
@@ -78,15 +98,16 @@ Spezifischen Paketmanager nutzen, um `git` zu installieren
 
 ## Grafische Oberflächen
 
-- `git-gui` / `gitk` (Built-In)
-- TortoiseGit
-- GitKraken
-- Visual Studio Code / IntelliJ
+-   `git-gui` / `gitk` (Built-In)
+-   TortoiseGit
+-   GitKraken
+-   Visual Studio Code / IntelliJ
+
+        </div>
 
     </div>
-</div>
 
---- 
+---
 
 # Wer bin ich?
 
@@ -95,13 +116,13 @@ git config --global user.name "Tobias Hund"
 git config --global user.email "tobias.hund@innovation-hub.de"
 ```
 
---- 
+---
 
 # Git Repository einrichten
 
-- Repository ist ein versionierter Arbeitsbereich (Dateiverzeichnis)
-- Repositories können mit einem Server synchronisiert werden
-- Erzeugt oder bestehende verwendet
+-   Repository ist ein versionierter Arbeitsbereich (Dateiverzeichnis)
+-   Repositories können mit einem Server synchronisiert werden
+-   Erzeugt oder bestehende verwendet
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -129,14 +150,14 @@ git clone https://github.com/twobiers/talks.git
 
 ## Commits
 
- - Verwaltungseinheit vom Code
- - Atomare Änderung
- - Bestandteile:
-   - Autor
-   - Datum
-   - Nachricht ("Was wurde warum geändert?")
-   - Zeiger auf vorhergehenden Commit-Hash (SHA1)
-   - Code-Änderungen ("Diffs")
+-   Verwaltungseinheit vom Code
+-   Atomare Änderung
+-   Bestandteile:
+    -   Autor
+    -   Datum
+    -   Nachricht ("Was wurde warum geändert?")
+    -   Zeiger auf vorhergehenden Commit-Hash (SHA1)
+    -   Code-Änderungen ("Diffs")
 
 ---
 
@@ -151,23 +172,22 @@ Date:   Wed Nov 9 20:07:38 2022 +0100
     initialize git speaker deck
 ```
 
---- 
+---
 
-* Commits basieren auf commits
-* Intern verkettete Liste
-
+-   Commits basieren auf commits
+-   Intern verkettete Liste
 
 ![invert:100%](./assets/commit-graph-simple.png)
 
 ---
 
-* Spezieller HEAD Zeiger, zeigt aktuellen "Ort"
+-   Spezieller HEAD Zeiger, zeigt aktuellen "Ort"
 
 ![invert:100%](./assets/commit-graph-head-1.png)
 
 ---
 
-* Kann verschoben werden
+-   Kann verschoben werden
 
 ![invert:100%](./assets/commit-graph-head-2.png)
 
@@ -175,8 +195,8 @@ Date:   Wed Nov 9 20:07:38 2022 +0100
 
 ## Staging Area
 
-* Für einen Commit werden Änderungen in Staging Area verschoben
-* Nur das was in der Staging Area ist, landet im Commit
+-   Für einen Commit werden Änderungen in Staging Area verschoben
+-   Nur das was in der Staging Area ist, landet im Commit
 
 ![invert:100%](https://git-scm.com/images/about/index1@2x.png)
 
@@ -225,6 +245,7 @@ Changes to be committed:
 	new file:   assets/commit-graph-merge.png
 	modified:   cards.md
 ```
+
 ---
 
 ### 4. Commit verfassen
@@ -237,13 +258,16 @@ $ git commit -m "Add git branching to cards"
 
 ### 5. Änderungen pushen
 
-* Commits sollten zeitnah gepusht werden
+-   Commits sollten zeitnah gepusht werden
 
 In den meisten Fällen geht das durch ein einfaches
+
 ```
 $ git push
 ```
+
 oder für einen nicht existierenden Branch
+
 ```
 $ git push -u [target] [branch]
 $ git push -u origin feature-branch
@@ -253,8 +277,8 @@ $ git push -u origin feature-branch
 
 ## Branching
 
-* "Abspalten" von einem Entwicklungsstand
-* Bspw. für Feature-Entwicklung losgekoppelt von dem Hauptstrang
+-   "Abspalten" von einem Entwicklungsstand
+-   Bspw. für Feature-Entwicklung losgekoppelt von dem Hauptstrang
 
 ![invert:100%](./assets/commit-graph-branch.png)
 
@@ -262,7 +286,7 @@ $ git push -u origin feature-branch
 
 ## Merge
 
-* Zusammenführen von Branches
+-   Zusammenführen von Branches
 
 ![invert:100%](./assets/commit-graph-merge.png)
 
@@ -270,16 +294,17 @@ $ git push -u origin feature-branch
 
 ## Revert
 
-* Fehlerhafte Commits passieren
-* Git unterstützt es die Änderungen rückgängig zu machen
-* Dabei werden Änderungen über einen neuen Commit rückgängig gemacht
-  * Historie bleibt stabil
+-   Fehlerhafte Commits passieren
+-   Git unterstützt es die Änderungen rückgängig zu machen
+-   Dabei werden Änderungen über einen neuen Commit rückgängig gemacht
+    -   Historie bleibt stabil
 
 ```
 $ git revert 78cdcd
 ```
 
---- 
+---
+
 # Praktischer Durchlauf
 
 <!--
@@ -302,31 +327,41 @@ git push
 -->
 
 ---
+
 # Best Practices
+
 ## `push --force` vermeiden.
 
-* Überschreibt Änderungshistorie
-* Destruktive Aktion
-* Bearbeiter können mit ihrer Arbeit auf existierenden Commits basieren, die gelöscht werden
+-   Überschreibt Änderungshistorie
+-   Destruktive Aktion
+-   Bearbeiter können mit ihrer Arbeit auf existierenden Commits basieren, die gelöscht werden
 
 ## Keine temporären Dateien einchecken
-- z.B. Editor-Dateien, `Thumbs.db`, `.DS_STORE`
-- Oder `node_modules`
-- `.gitignore` zum Ignorieren (<https://gitignore.io>)
+
+-   z.B. Editor-Dateien, `Thumbs.db`, `.DS_STORE`
+-   Oder `node_modules`
+-   `.gitignore` zum Ignorieren (<https://gitignore.io>)
 
 ---
+
 # Best Practices
+
 ## Kleine, spezifische Commits
-- Kleinschrittiges Commiten
-- Aussagekräftige Commit-Nachricht
+
+-   Kleinschrittiges Commiten
+-   Aussagekräftige Commit-Nachricht
 
 ## Keine Geheimnisse einchecken
-- Schwer, aus alten Commits zu entfernen
-- Ggf. trotzdem rekonstruierbar (`git reflog`)
+
+-   Schwer, aus alten Commits zu entfernen
+-   Ggf. trotzdem rekonstruierbar (`git reflog`)
 
 ---
+
 # Best Practices
+
 ## Conventional Commits
+
 ```
 <type>[optional scope]: <description>
 
@@ -334,4 +369,5 @@ git push
 
 [optional footer(s)]
 ```
+
 <https://www.conventionalcommits.org/>
