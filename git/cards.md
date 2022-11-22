@@ -35,7 +35,7 @@ https://github.com/yhatt/marp-cli-example
 
     -   Nachvollziehbare Änderungen
     -   Zugriff auf alte Versionen
-    -   Austauschen von Änderunaagen
+    -   Austauschen von Änderungen
 
             </div>
 
