@@ -43,15 +43,21 @@ https://github.com/yhatt/marp-cli-example
 
 ---
 
+
 ## Pull Request
 
 -   TODO
 
 ---
 
+## Merge Conflict
+
+agjag
+
+
 # Steckbrief
 
--   2005 von Linus Torvalds initiiert
+-   2005 von Linus Torvalds (der von Linux) initiiert
 -   Hat nahezu alle alternativen verdrängt [1]
 -   Entwicklung des Linux-Kernels
 -   Dezentralität
@@ -60,6 +66,10 @@ https://github.com/yhatt/marp-cli-example
 <sub>[1] [StackOverflow Developer Survey 2022](https://survey.stackoverflow.co/2022/#section-version-control-version-control-systems)</sub>
 
 ![bg right 60%](https://cdn.britannica.com/99/124299-050-4B4D509F/Linus-Torvalds-2012.jpg)
+
+---
+
+## TODO
 
 ---
 
