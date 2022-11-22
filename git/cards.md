@@ -43,6 +43,10 @@ https://github.com/yhatt/marp-cli-example
 
 ---
 
+## Merge Conflict
+
+agjag
+
 # Steckbrief
 
 -   2005 von Linus Torvalds initiiert
